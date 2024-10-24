@@ -9,7 +9,7 @@ in vec4 vColor;
 out vec4 color;
 
 const int MAX_POINT_LIGHTS = 3;
-const int MAX_SPOT_LIGHTS = 4;
+const int MAX_SPOT_LIGHTS = 3;
 
 struct Light
 {
@@ -161,5 +161,4 @@ void main()
 	finalcolor += CalcPointLights();
 	finalcolor += CalcSpotLights();
 	color = texture(theTexture, TexCoord)*vColor*finalcolor;
-	//color = texture(theTexture, TexCoord)*vColor;
 }
